@@ -1,6 +1,6 @@
-Python API - Flask - MongoDB
+## Python API - Flask - MongoDB
 
-RUN
+* RUN
 
 ```docker
 docker run -d -p 27017:27017 mongo 
@@ -10,6 +10,7 @@ or
 ```bash
 sudo systemctl start mongod.service 
 ```
+---
 
 ```bash
 pipenv install
@@ -17,7 +18,7 @@ pipenv shell
 python app.py
 ```
 
-JSON OBJECT
+* JSON OBJECT
 
 ```json
 {
@@ -31,8 +32,9 @@ JSON OBJECT
 }
 ```
 
+---
 
-POST
+* POST
 
 ```bash
 curl --location --request POST 'http://127.0.0.1:5000/movies' \
@@ -47,9 +49,9 @@ curl --location --request POST 'http://127.0.0.1:5000/movies' \
     ]
 }'
 ```
+---
 
-
-BUILD
+* BUILD
 
 ```docker
 docker build -t pytest-test .
