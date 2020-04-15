@@ -1,3 +1,4 @@
+from waitress import serve
 from flask import Flask, request, Response
 from database.db import initialize_db
 from database.models import Movie
@@ -14,6 +15,11 @@ app.config['MONGODB_SETTINGS'] = {
 }
 
 initialize_db(app)
+
+
+@app.route('/')
+def index():
+    return "<h2>LAB 🐍 </h2>"
 
 
 @app.route('/movies')
@@ -49,4 +55,8 @@ def get_movie(id):
     return Response(movies, mimetype="application/json", status=200)
 
 
-app.run()
+# To run in development
+# app.run()
+
+# To run in production
+serve(app, host="0.0.0.0", port=5000)
