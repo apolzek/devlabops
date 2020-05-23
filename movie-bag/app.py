@@ -14,12 +14,16 @@ app.config['MONGODB_SETTINGS'] = {
     'host': 'mongodb://test-mongo/movie-bag'
 }
 
+#app.config['MONGODB_SETTINGS'] = {
+#    'host': 'mongodb://0.0.0.0/movie-bag'
+#}
+
 initialize_db(app)
 
 
 @app.route('/')
 def index():
-    return "<h2>LAB 🐍 </h2>"
+    return "<h2>*_*</h2>"
 
 
 @app.route('/movies')
