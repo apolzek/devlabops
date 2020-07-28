@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:1.19.1-alpine
+    container_name: nginx
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8000:80"
+
+  node1:
+    image: nginx:1.19.1-alpine
+    container_name: node1
+    volumes:
+      - ./index-node1.html:/usr/share/nginx/html/index.html
+    ports:
+      - "80"
+
+  node2:
+    image: nginx:1.19.1-alpine
+    container_name: node2
+    volumes:
+      - ./index-node2.html:/usr/share/nginx/html/index.html
+    ports:
+      - "80"

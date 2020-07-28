@@ -1,0 +1,11 @@
+docker-compose exec nginx apk add bash vim
+docker-compose exec nginx bash 
+
+docker-compose exec node1 apk add bash vim
+docker-compose exec node1 bash
+
+docker-compose exec node2 apk add bash vim
+docker-compose exec node2 bash
+
+docker-compose up -d 
+docker-compose down
