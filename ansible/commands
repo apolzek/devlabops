@@ -1,0 +1,2 @@
+ansible all -m ping
+ansible all -m ping -u <user>

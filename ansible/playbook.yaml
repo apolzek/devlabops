@@ -1,0 +1,16 @@
+- hosts: all
+  become_method: sudo
+  become: true
+  vars_files:
+    - variables.yaml
+  
+  remote_user: "{{ ansible_sudo_user }}" 
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: "{{ ansible_sudo_user }}"    
+
+    - name: Update repositories cache and install "foo" package
+      apt:
+        name: apache2
+        state: present
