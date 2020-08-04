@@ -8,5 +8,11 @@ pipeline {
                 echo 'Testing trigger !'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy test'
+                sh 'docker run -d -P --name iamfoo containous/whoami'
+            }
+        }
     }
 }
