@@ -1,0 +1,2 @@
+docker stack rm jenkins && sudo rm -rf jenkins/* && docker stack deploy -c docker-compose.yaml jenkins
+docker exec <id> cat /var/jenkins_home/secrets/initialAdminPassword

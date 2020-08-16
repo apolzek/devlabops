@@ -1,0 +1,31 @@
+NODE                                         NAMESPACE     POD                                                         CPU REQUESTS   CPU LIMITS    MEMORY REQUESTS   MEMORY LIMITS
+*                                            *             *                                                           1357m (23%)    3318m (57%)   1361Mi (16%)      2672Mi (31%)
+                                                                                                                                                                      
+gke-cluster-lab-default-pool-ecd69c87-d0mq   *             *                                                           524m (27%)     1066m (55%)   540Mi (19%)       917Mi (32%)
+gke-cluster-lab-default-pool-ecd69c87-d0mq   kube-system   fluentd-gcp-v3.1.1-f899z                                    100m (5%)      1000m (51%)   200Mi (7%)        500Mi (17%)
+gke-cluster-lab-default-pool-ecd69c87-d0mq   kube-system   heapster-gke-556d684c78-7c6pj                               63m (3%)       63m (3%)      210Mi (7%)        210Mi (7%)
+gke-cluster-lab-default-pool-ecd69c87-d0mq   kube-system   kube-dns-5c446b66bd-n5sck                                   260m (13%)     0m (0%)       110Mi (3%)        170Mi (6%)
+gke-cluster-lab-default-pool-ecd69c87-d0mq   kube-system   kube-proxy-gke-cluster-lab-default-pool-ecd69c87-d0mq       100m (5%)      0m (0%)       0Mi (0%)          0Mi (0%)
+gke-cluster-lab-default-pool-ecd69c87-d0mq   kube-system   prometheus-to-sd-7rs5k                                      1m (0%)        3m (0%)       20Mi (0%)         37Mi (1%)
+                                                                                                                                                                      
+gke-cluster-lab-default-pool-ecd69c87-r7z7   *             *                                                           491m (25%)     1013m (52%)   360Mi (12%)       727Mi (25%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   event-exporter-v0.3.0-5cd6ccb7f7-zbx7d                      0m (0%)        0m (0%)       0Mi (0%)          0Mi (0%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   fluentd-gcp-scaler-6855f55bcc-4gf9m                         0m (0%)        0m (0%)       0Mi (0%)          0Mi (0%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   fluentd-gcp-v3.1.1-frfrs                                    100m (5%)      1000m (51%)   200Mi (7%)        500Mi (17%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   kube-dns-5c446b66bd-fwz4f                                   260m (13%)     0m (0%)       110Mi (3%)        170Mi (6%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   kube-dns-autoscaler-6b7f784798-xpn8c                        20m (1%)       0m (0%)       10Mi (0%)         0Mi (0%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   kube-proxy-gke-cluster-lab-default-pool-ecd69c87-r7z7       100m (5%)      0m (0%)       0Mi (0%)          0Mi (0%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   l7-default-backend-84c9fcfbb-trxfc                          10m (0%)       10m (0%)      20Mi (0%)         20Mi (0%)
+gke-cluster-lab-default-pool-ecd69c87-r7z7   kube-system   prometheus-to-sd-r5t6c                                      1m (0%)        3m (0%)       20Mi (0%)         37Mi (1%)
+                                                                                                                                                                      
+gke-cluster-lab-default-pool-ecd69c87-r8fk   *             *                                                           342m (17%)     1239m (64%)   460Mi (16%)       1027Mi (36%)
+gke-cluster-lab-default-pool-ecd69c87-r8fk   kube-system   fluentd-gcp-v3.1.1-zbk7x                                    100m (5%)      1000m (51%)   200Mi (7%)        500Mi (17%)
+gke-cluster-lab-default-pool-ecd69c87-r8fk   kube-system   kube-proxy-gke-cluster-lab-default-pool-ecd69c87-r8fk       100m (5%)      0m (0%)       0Mi (0%)          0Mi (0%)
+gke-cluster-lab-default-pool-ecd69c87-r8fk   kube-system   metrics-server-v0.3.3-fdc67d4b6-nkfd9                       48m (2%)       143m (7%)     105Mi (3%)        355Mi (12%)
+gke-cluster-lab-default-pool-ecd69c87-r8fk   kube-system   prometheus-to-sd-22mcs                                      1m (0%)        3m (0%)       20Mi (0%)         37Mi (1%)
+gke-cluster-lab-default-pool-ecd69c87-r8fk   kube-system   stackdriver-metadata-agent-cluster-level-688f5bf5dd-8knvq   93m (4%)       93m (4%)      135Mi (4%)        135Mi (4%)
+
+NAME                                         CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+gke-cluster-lab-default-pool-ecd69c87-d0mq   72m          3%     653Mi           23%       
+gke-cluster-lab-default-pool-ecd69c87-r7z7   76m          3%     698Mi           24%       
+gke-cluster-lab-default-pool-ecd69c87-r8fk   77m          3%     632Mi           22%       
