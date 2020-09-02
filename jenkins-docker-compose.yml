@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+    jenkins_master:
+        image: jenkins/jenkins:lts
+        container_name: jenkins
+        user: root
+        environment:
+        - TZ=America/Denver
+        restart: always
+        volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+        - $HOME/jenkins:/var/jenkins_home
+        ports:
+        - 127.0.0.1:2345:2345
+        - 8080:8080
+        - 50000:50000
+
+    jenkins_slave:
+        image: jenkins/jnlp-slave
+        container_name: jnlp_slave
+        user: root
+        command: -url http://192.168.100.4
+        restart: always
+        volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+        - $HOME/jnlp_slave:/var/jenkins_home
