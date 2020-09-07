@@ -1,0 +1,6 @@
+docker run \
+  -p 9113:9113 \
+  nginx/nginx-prometheus-exporter:0.2.0 \
+  -nginx.scrape.uri=http://localhost/metrics \
+  -nginx.retries=10 \
+  -web.telemetry-path=/prometheus

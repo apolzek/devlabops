@@ -3,12 +3,12 @@
   become: true
   vars_files:
     - variables.yaml
-  
-  remote_user: "{{ ansible_sudo_user }}" 
+
+  remote_user: "{{ ansible_sudo_user }}"
   tasks:
     - name: test connection
       ping:
-      remote_user: "{{ ansible_sudo_user }}"    
+      remote_user: "{{ ansible_sudo_user }}"
 
     - name: Update repositories cache and install "foo" package
       apt:
