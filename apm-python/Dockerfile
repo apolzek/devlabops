@@ -8,6 +8,8 @@ WORKDIR /app
 
 ADD . /app
 
+EXPOSE 5000
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 ENTRYPOINT ["python", "main.py"]
