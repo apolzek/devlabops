@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:1.19.1-alpine
+    network_mode: "bridge"
+    ports:
+      - "8000:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+
+  nginx-plugin-prometheus:
+    image: nginx/nginx-prometheus-exporter:0.8.0
+    network_mode: "bridge"
+    ports:
+      - "9113:9113"
+    command: 
+      -nginx.scrape-uri http://nginx:80/stub_status
+    links:
+      - "nginx"
+    
+  prometheus:
+    image: prom/prometheus
+    network_mode: "bridge"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+      
+  # grafana:
+  #   image: grafana/grafana
+  #   container_name: grafana
+  #   ports:
+  #     - "3000:3000"
+  #   links:
+  #     - prometheus
+
+# docker run -p 9113:9113 nginx/nginx-prometheus-exporter:0.2.0 -nginx.scrape-uri http://127.0.0.1:8000/metrics
+# docker run -d --network host nginx/nginx-prometheus-exporter:0.2.0 -nginx.scrape-uri http://127.0.0.1:8000/metrics
