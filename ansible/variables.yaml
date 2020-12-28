@@ -1,3 +1,0 @@
-ansible_sudo_user: user
-#ansible_sudo_pass: pass
-service_name: nginx
