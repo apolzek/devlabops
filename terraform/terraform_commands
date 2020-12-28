@@ -1,0 +1,8 @@
+terraform init
+terraform init -upgrade
+terraform plan
+terraform plan -out planoteste
+terraform apply "planoteste"
+terraform console # aws_instance.web | # aws_ami.ubuntu
+terraform plan -var image_id="image-example" -out plantest
+terraform plan -var-file="variables.tfvar" out plantest
