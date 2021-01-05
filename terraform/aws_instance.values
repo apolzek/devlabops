@@ -1,0 +1,63 @@
+  # aws_instance.web will be destroyed
+  - resource "aws_instance" "web" {
+      - ami                          = "ami-0885b1f6bd170450c" -> null
+      - arn                          = "arn:aws:ec2:us-east-1:511821351562:instance/i-09431b64d24f05bcf" -> null
+      - associate_public_ip_address  = true -> null
+      - availability_zone            = "us-east-1b" -> null
+      - cpu_core_count               = 1 -> null
+      - cpu_threads_per_core         = 1 -> null
+      - disable_api_termination      = false -> null
+      - ebs_optimized                = false -> null
+      - get_password_data            = false -> null
+      - hibernation                  = false -> null
+      - id                           = "i-09431b64d24f05bcf" -> null
+      - instance_state               = "running" -> null
+      - instance_type                = "t2.micro" -> null
+      - ipv6_address_count           = 0 -> null
+      - ipv6_addresses               = [] -> null
+      - monitoring                   = false -> null
+      - primary_network_interface_id = "eni-012767583016703a4" -> null
+      - private_dns                  = "ip-172-31-17-159.ec2.internal" -> null
+      - private_ip                   = "172.31.17.159" -> null
+      - public_dns                   = "ec2-54-227-115-222.compute-1.amazonaws.com" -> null
+      - public_ip                    = "54.227.115.222" -> null
+      - secondary_private_ips        = [] -> null
+      - security_groups              = [
+          - "default",
+        ] -> null
+      - source_dest_check            = true -> null
+      - subnet_id                    = "subnet-f03f6fbd" -> null
+      - tags                         = {
+          - "Name" = "web"
+        } -> null
+      - tenancy                      = "default" -> null
+      - volume_tags                  = {} -> null
+      - vpc_security_group_ids       = [
+          - "sg-1059c324",
+        ] -> null
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 1 -> null
+          - http_tokens                 = "optional" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/sda1" -> null
+          - encrypted             = false -> null
+          - iops                  = 100 -> null
+          - throughput            = 0 -> null
+          - volume_id             = "vol-044380e8806678dbf" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp2" -> null
+        }
+    }

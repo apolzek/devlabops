@@ -5,8 +5,8 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "descomplicando-terraform-apolzek-tfstates"
-    key    = "terraform-apolzek.tfstate"
+    bucket = "aws-s3-study-tfstates"
+    key    = "example05.tfstate"
     region = "us-east-1"
   }
 } 

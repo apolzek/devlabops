@@ -10,7 +10,7 @@ data "aws_ami" "ubuntu" {
 }
 
 data "aws_ami" "ubuntu_west" {
-  provider = aws.west
+  provider = aws.aws_west
   most_recent = true
 
   filter {
@@ -31,10 +31,11 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_instance" "web_west" {
+  provider      = aws.aws_west
   ami           = data.aws_ami.ubuntu_west.id
   instance_type = "t2.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "HelloWorld West"
   }
 }
