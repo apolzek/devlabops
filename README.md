@@ -1,4 +1,7 @@
-# dev**lab**ops
+# DevLabOps
+
+<p style="text-align: center;"> and </p>
+
 
 |                                 |Tools                          |Description                  |
 |---------------------------------|-------------------------------|-----------------------------|
