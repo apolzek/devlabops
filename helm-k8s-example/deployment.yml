@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnet-core-api-example
+  labels:
+    app: aspnet-core-api-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aspnet-core-api-example
+  template:
+    metadata:
+      labels:
+        app: aspnet-core-api-example
+    spec:
+      containers:
+      - name: aspnet-core-api-example
+        image: apolzek/aspnet-core-api-example
+        ports:
+        - containerPort: 4000
