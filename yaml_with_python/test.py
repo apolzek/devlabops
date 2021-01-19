@@ -1,22 +1,22 @@
-# pip3 install -r requirements.txt 
+# pip3 install -r requirements.txt
 import yaml
 import json
 
 
-def checkValues(objYML):
-    print(objYML)
-
-    obj = yaml.dump(objYML, sort_keys=True)
-    print(obj)  # Format like yml
-
-    for doc in objYML:
-        for k, v in doc.items():
-            print(k, "->", v)
+def _finditem(obj, key):
+    if key in obj:
+        return obj[key]
+    for k, v in obj.items():
+        if isinstance(v, dict):
+            item = _finditem(v, key)
+            if item is not None:
+                return item
 
 
 with open(r'example.yml') as file:
-    list = yaml.load(file, Loader=yaml.FullLoader)
+    yml = yaml.load(file, Loader=yaml.FullLoader)
 
-    # for item in list:
-    #     print(item)
-    checkValues(list)
+    print(yml)
+    print(type(yml))  # Dict or List
+    researched = _finditem(yml, "tabitha")
+    print(researched)
