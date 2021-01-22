@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aspnet-core-api-example
+  name: {{ .Release.Name }}
   labels:
     app: aspnet-core-api-example
 spec:
